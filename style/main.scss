@@ -1,0 +1,107 @@
+@media (min-width: 1440px) {
+    @import "wide_screen_desktop";
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+    @import "desktop";
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    @import "large_tablet_lands";
+}
+
+@media (min-width: 800px) and (max-width: 1023px) {
+    @import "phone_small_tablet_lands";
+}
+
+@media (min-width: 768px) and (max-width: 799px) {
+    @import "large_tablet_port";
+}
+
+@media (min-width: 600px)and (max-width: 767px) {
+    @import "small_tablet_port";
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+    @import "phone_lands_port";
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font: {
+        family: 'Verdana_medium';
+        weight: normal;
+        style: normal;
+    }
+    src: url('fonts/Verdana_medium.eot') format('eot'),
+        url('fonts/Verdana_medium.woff2') format('woff2'),
+        url('fonts/Verdana_medium.woff') format('woff'), 
+        url('fonts/Verdana_medium.ttf') format('ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Verdana_medium", Arial, sans-serif;
+    letter-spacing: 1px; 
+}
+
+.page-body {
+    section {
+        > div {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+    }
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.date-category-containers-article {
+    opacity: 0.5;
+}
+
+footer {
+    >div:nth-child(2n-1) {
+        background-color: #f4f4f4;
+    }
+
+    a {
+        background-size: cover;
+    }
+
+    >div:nth-child(2) {
+        background-color: #f9f9f9;
+    }
+
+    h4 {
+        background-image: url("../img/general/link_bg.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+#backToTop {
+    background: url("../img/footer/btt.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+}
